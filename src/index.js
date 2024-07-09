@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 class Todo {
   constructor(TodoTitle, TodoDesc, TodoDueDate) {
     this.title = TodoTitle;
@@ -33,7 +35,11 @@ const HandleTodoSubmit = (event) => {
 
   console.log(HomeProject.getTodoList());
   HomeProject.addToDo(
-    new Todo(todoFormTitle.value, todoFormDesc.value, todoFormDate.value)
+    new Todo(
+      todoFormTitle.value,
+      todoFormDesc.value,
+      format(todoFormDate.value, "do/MMM/yyyy")
+    )
   );
   renderTodos();
 };
