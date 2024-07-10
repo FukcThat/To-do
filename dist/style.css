@@ -5,4 +5,37 @@
 
 body {
     background-color: grey;
+    display: flex;
+
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    height: 100dvh;
+    width: 15rem;
+    background-color: sienna;
+    color: rgb(243, 223, 207);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.nav-btn {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: white;
+    text-align: left;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    color: rgb(243, 223, 207);
+    text-shadow: rgb(128, 60, 28) 2px 2px 2px;
+    font-size: 2.1rem;
 }

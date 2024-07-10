@@ -1,5 +1,6 @@
 import { format } from "date-fns";
 
+// To-do
 class Todo {
   constructor(TodoTitle, TodoDesc, TodoDueDate) {
     this.title = TodoTitle;
@@ -7,6 +8,8 @@ class Todo {
     this.dueDate = TodoDueDate;
   }
 }
+
+// Project / To-do List Array
 
 class Project {
   constructor() {
@@ -22,14 +25,23 @@ class Project {
   }
 }
 
+// Home Project
 const HomeProject = new Project();
 
+// New Project Button
+const newProjectBtn = document.getElementById("addProjectBtn");
+newProjectBtn.addEventListener("click", () => {
+  new Project();
+});
+
+// To-do Elements from inputs
 const todoFormElement = document.getElementById("TodoForm");
 const todoFormTitle = document.getElementById("TodoFormTitle");
 const todoFormDesc = document.getElementById("TodoFormDesc");
 const todoFormDate = document.getElementById("TodoFormDate");
 const homeContainer = document.getElementById("homeContainer");
 
+// To-do submit Handler
 const HandleTodoSubmit = (event) => {
   event.preventDefault();
 
@@ -44,8 +56,10 @@ const HandleTodoSubmit = (event) => {
   renderTodos();
 };
 
+// Form event listener
 todoFormElement.addEventListener("submit", HandleTodoSubmit);
 
+// Render To-dos on Screen
 const renderTodos = () => {
   homeContainer.innerHTML = "";
   HomeProject.getTodoList().map((todoItem) => {
