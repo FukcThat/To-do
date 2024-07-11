@@ -8,26 +8,40 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <nav>
-      <button class="nav-btn">Home</button>
-      <h1>Projects</h1>
-      <button id="addProjectBtn" class="nav-btn">Add Project</button>
-    </nav>
-    <form id="TodoForm">
-      <label
-        >Title
-        <input id="TodoFormTitle" type="text" placeholder="Title" />
-      </label>
-      <label
-        >Description
-        <input id="TodoFormDesc" type="text" placeholder="Description" />
-      </label>
-      <label
-        >Date
-        <input id="TodoFormDate" type="date" />
-      </label>
-      <button>Submit</button>
-    </form>
+    <section id="todoModalSection" class="modal hidden">
+      <form id="TodoForm">
+        <h2>Task</h2>
+        <button id="closeTodoFormBtn" class="close-btn">x</button>
+        <label
+          >Title
+          <input id="TodoFormTitle" type="text" placeholder="Title" />
+        </label>
+        <label
+          >Description
+          <input id="TodoFormDesc" type="text" placeholder="Description" />
+        </label>
+        <label
+          >Date
+          <input id="TodoFormDate" type="date" />
+        </label>
+        <div id="radioBtns">
+          <label>
+            <input id="lowPrio" type="radio" name="priority" value="low" />
+            <span id="whenever">Whenever</span>
+          </label>
+          <label>
+            <input id="lowPrio" type="radio" name="priority" value="medium" />
+            <span id="soon">Ideally Soonish</span>
+          </label>
+          <label>
+            <input id="lowPrio" type="radio" name="priority" value="high" />
+            <span id="now">Basically right now</span>
+          </label>
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+    <div class="overlay hidden"></div>
     <div id="homeContainer"></div>
   </body>
 </html>
