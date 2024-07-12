@@ -10,6 +10,7 @@ body {
 label {
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
 }
 
 input[type='radio'] {
@@ -17,10 +18,15 @@ input[type='radio'] {
     opacity: 0;
     height: 0;
     width: 0;
+    
 }
 
-input#whenever:checked+span {
-    background-color: rgb(102, 178, 65);
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
 }
 
 .modal span {
@@ -30,36 +36,44 @@ input#whenever:checked+span {
     text-align: center;
     width: 8rem;
     height: 3rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     cursor: pointer;
 }
 
-#whenever {
+.whenever {
     border: 2px solid rgb(102, 178, 65);
 }
 
-#whenever:hover {
+.whenever:hover {
     background-color: rgb(133, 212, 94);
 }
 
-#whenever:checked {
+.whenever input:checked + span {
     background-color: rgb(102, 178, 65);
 }
 
-#soon {
+.soon {
     border: 2px solid rgb(255, 230, 0);
 }
 
-#soon:hover {
+.soon:hover {
     background-color: rgb(255, 238, 84);
 }
 
-#now {
+.soon input:checked + span {
+    background-color: rgb(255, 230, 0);
+}
+
+.now {
     border: 2px solid rgb(255, 82, 82);
 }
 
-#now:hover {
+.now:hover {
     background-color: rgb(255, 119, 119);
+}
+
+.now input:checked + span {
+    background-color: rgb(255, 82, 82);
 }
 
 .overlay {
@@ -77,13 +91,13 @@ input#whenever:checked+span {
 
 
   .modal {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.4rem;
     width: 450px;
     padding: 1.3rem;
     min-height: 250px;
+    z-index: 2;
     position: absolute;
     top: 20%;
     background-color: white;
@@ -91,7 +105,7 @@ input#whenever:checked+span {
     border-radius: 15px;
   }
 
-  .btn-open {
+  .open-btn {
     position: absolute;
     bottom: 150px;
   }
@@ -108,7 +122,12 @@ input#whenever:checked+span {
     background-color: rgba(255, 0, 0, 0.5);
     color: white;
   }
-  
+
+  .close-btn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.75);
+  }
+
 #TodoForm {
     height: 20rem;
     width: 25rem;

@@ -25,23 +25,24 @@
           <input id="TodoFormDate" type="date" />
         </label>
         <div id="radioBtns">
-          <label>
+          <label class="whenever">
             <input id="lowPrio" type="radio" name="priority" value="low" />
-            <span id="whenever">Whenever</span>
+            <span>Whenever</span>
           </label>
-          <label>
+          <label class="soon">
             <input id="lowPrio" type="radio" name="priority" value="medium" />
-            <span id="soon">Ideally Soonish</span>
+            <span>Ideally Soonish</span>
           </label>
-          <label>
+          <label class="now">
             <input id="lowPrio" type="radio" name="priority" value="high" />
-            <span id="now">Basically right now</span>
+            <span>Basically right now</span>
           </label>
         </div>
         <button>Submit</button>
       </form>
     </section>
     <div class="overlay hidden"></div>
+    <button class="open-btn">New Task</button>
     <div id="homeContainer"></div>
   </body>
 </html>
