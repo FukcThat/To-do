@@ -11,7 +11,7 @@
     <section id="todoModalSection" class="modal hidden">
       <form id="TodoForm">
         <h2>Task</h2>
-        <button id="closeTodoFormBtn" class="close-btn">x</button>
+        <button id="closeTodoFormBtn" class="close-btn" type="button">x</button>
         <label
           >Title
           <input id="TodoFormTitle" type="text" placeholder="Title" />
@@ -42,7 +42,23 @@
       </form>
     </section>
     <div class="overlay hidden"></div>
-    <button class="open-btn">New Task</button>
+    <button id="open-new-todo" class="open-btn">New Task</button>
     <div id="homeContainer"></div>
+    <section id="projectModalSection" class="modal hidden">
+      <form id="projectForm">
+        <h2>New Project</h2>
+        <button id="closeProjectFormBtn" class="close-btn" type="button">
+          x
+        </button>
+        <label>
+          Project Name
+          <input id="ProjectFormTitle" type="text" placeholder="Project Name" />
+        </label>
+        <button>Submit</button>
+      </form>
+    </section>
+
+    <div class="overlay hidden"></div>
+    <button id="open-new-project" class="open-btn">New Project</button>
   </body>
 </html>
