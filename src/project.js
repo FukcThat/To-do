@@ -3,7 +3,6 @@
 class Project {
   constructor(pjctName) {
     this.todoList = [];
-
     this.projectName = pjctName;
   }
 

@@ -2,15 +2,31 @@
 
 Odin Project - To-do List
 
-1. Make a function that renders the to-dos of A project onto the screen
-   1.1 Is Method that's part of the class
-   1.2 How to handle existing html elements
+DONE - Render Projects
 
-2. Method to edit To-Do info
-   2.1
+DONE - Add projects to array
 
-3. Delete a To-Do
+- Make render To-do function
 
-4. Create new Projects
+  - expects array of to-dos
 
-5. Select Project for new To-Do
+- Todo-Form Functionality
+
+  - create drop down with ProjectData Option
+  - validate input
+  - create todo object from input
+  - add todo to correct project
+  - reset form & close
+  - render new Todo array
+
+- Add onlick to projectDiv's
+
+  - Onclick render To-Do's of that project to To-Do container
+    - Create new array
+      - loop through projects
+      - compare to project name
+      - loop through that projects to-do's
+      - add project to-do's to array
+    - pass array into render to-do function
+
+- Local Storage fun
