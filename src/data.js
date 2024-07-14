@@ -10,7 +10,8 @@ homeProject.addTodo(
   new Todo(
     "Feed Gitty",
     "Just put the format",
-    format(new Date(), "do.MMM.yyyy")
+    format(new Date(), "do.MMM.yyyy"),
+    "low"
   )
 );
 

@@ -4,8 +4,12 @@ import Todo from "./todo";
 import { projectData } from "./data";
 import { initTodoModal } from "./todo-modal";
 import { initProjectModal } from "./project-modal";
-import { renderProjects } from "./render";
+import { renderProjects, renderTodos } from "./render";
 
 initTodoModal();
 initProjectModal();
 renderProjects(projectData);
+
+projectData.forEach((project) => {
+  renderTodos(project.getTodoList());
+});

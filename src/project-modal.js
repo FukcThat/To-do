@@ -25,11 +25,9 @@ const closeModal = () => {
 };
 
 const submitProjectForm = () => {
-  console.log("Tada!");
-
   // Validate input (perhaps later)
   if (projectNameInput.value === "") {
-    window.alert("Cheers");
+    window.alert("Be so kind and actually give it name, ok?");
   } else {
     // Create a new Project Object with data from Form
     const newProject = new Project(projectNameInput.value);
@@ -37,16 +35,14 @@ const submitProjectForm = () => {
     // Add new project to projects array
     projectData.push(newProject);
 
+    // Re-render Projects Array and close Modal
     closeModal();
     renderProjects(projectData);
   }
-
-  // Rerender Projects Array
 };
 
 export const initProjectModal = () => {
   openModalBtn.addEventListener("click", openModal);
   closeModalBtn.addEventListener("click", closeModal);
-
   projectSubBtn.addEventListener("click", submitProjectForm);
 };
