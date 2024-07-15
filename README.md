@@ -30,3 +30,21 @@ DONE - Add projects to array
     - pass array into render to-do function
 
 - Local Storage fun
+
+---
+
+1. RenderProject function
+
+   - takes name of project to render
+   - gets todoList of that Project
+   - passes that into renderTodo()
+
+2. Current Project functionality
+
+   - switch active project
+     --> populate todo-container with correct todoList
+
+3. PrimeRender function
+   - takes a project name
+     - if its Home its calls HomeRender
+     - otherwise projectRender

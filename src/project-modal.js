@@ -25,7 +25,7 @@ const closeModal = () => {
 };
 
 const submitProjectForm = () => {
-  // Validate input (perhaps later)
+  // Validate input
   if (projectNameInput.value === "") {
     window.alert("Be so kind and actually give it name, ok?");
   } else {

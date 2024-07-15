@@ -1,4 +1,4 @@
-import Todo from "./todo";
+import { projectData } from "./data";
 
 export const renderProjects = (projects) => {
   const projectContainer = document.querySelector(".project-continer");
@@ -39,8 +39,18 @@ export const renderTodos = (todoList) => {
     todoPrio.textContent = `Priority: ${todo.priority}`;
     todoDiv.appendChild(todoPrio);
 
-    // Project Choice
-
     todoContainer.appendChild(todoDiv);
   });
+};
+
+export const renderHome = () => {
+  const everyTodoArray = [];
+
+  projectData.forEach((project) => {
+    project.getTodoList().forEach((todoItem) => {
+      everyTodoArray.push(todoItem);
+    });
+  });
+
+  renderTodos(everyTodoArray);
 };
