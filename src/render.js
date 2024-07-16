@@ -6,9 +6,13 @@ export const renderProjects = (projects) => {
 
   // Create a div for each project and append it to the nav
   projects.forEach((project) => {
-    const projectDiv = document.createElement("div");
-    projectDiv.textContent = project.projectName;
-    projectContainer.appendChild(projectDiv);
+    const projectNavBtn = document.createElement("button");
+
+    projectNavBtn.addEventListener("click", () => {
+      renderOneProject(project.projectName);
+    });
+    projectNavBtn.textContent = project.projectName;
+    projectContainer.appendChild(projectNavBtn);
   });
 };
 
@@ -53,4 +57,14 @@ export const renderHome = () => {
   });
 
   renderTodos(everyTodoArray);
+};
+
+export const renderOneProject = (projectName) => {
+  if (projectName === "Home") return renderHome();
+
+  projectData.forEach((project) => {
+    if (project.projectName === projectName) {
+      renderTodos(project.getTodoList());
+    }
+  });
 };

@@ -6,45 +6,42 @@ DONE - Render Projects
 
 DONE - Add projects to array
 
-- Make render To-do function
+DONE - Make render To-do function
 
-  - expects array of to-dos
+DONE - expects array of to-dos
 
-- Todo-Form Functionality
+DONE - Todo-Form Functionality
 
-  - create drop down with ProjectData Option
-  - validate input
-  - create todo object from input
-  - add todo to correct project
-  - reset form & close
-  - render new Todo array
+- create drop down with ProjectData Option
+- validate input
+- create todo object from input
+- add todo to correct project
+- reset form & close
+- render new Todo array
 
-- Add onlick to projectDiv's
+DONE - RenderProject function
 
-  - Onclick render To-Do's of that project to To-Do container
-    - Create new array
-      - loop through projects
-      - compare to project name
-      - loop through that projects to-do's
-      - add project to-do's to array
-    - pass array into render to-do function
+- Create new array for project's own todo-list
+- loop through projects
+- takes name of project to render
+- compare to project name
+- gets todoList of that Project
+- add project to-do's to array
+- pass array into render to-do function
+
+DONE - Add onlick to projectNavBtn's
+
+- Onclick render To-Do's of that project to To-Do container
+
+DONE - PrimeRender function
+
+- takes a project name
+  - if its Home its calls HomeRender
+  - otherwise projectRender
+
+DONE - Current Project functionality
+
+- switch active project
+  --> populate todo-container with correct todoList
 
 - Local Storage fun
-
----
-
-1. RenderProject function
-
-   - takes name of project to render
-   - gets todoList of that Project
-   - passes that into renderTodo()
-
-2. Current Project functionality
-
-   - switch active project
-     --> populate todo-container with correct todoList
-
-3. PrimeRender function
-   - takes a project name
-     - if its Home its calls HomeRender
-     - otherwise projectRender

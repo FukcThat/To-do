@@ -20,7 +20,7 @@ homeProject.addTodo(
 anotherProject.addTodo(
   new Todo(
     "Feed Gitty",
-    "Just put the format",
+    "Just put the formatan",
     format(new Date(), "do.MMM.yyyy"),
     "low",
     "Another"
