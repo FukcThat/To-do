@@ -49,7 +49,6 @@ export const renderTodos = (todoList) => {
 
 export const renderHome = () => {
   const everyTodoArray = [];
-
   projectData.forEach((project) => {
     project.getTodoList().forEach((todoItem) => {
       everyTodoArray.push(todoItem);

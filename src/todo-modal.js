@@ -1,6 +1,7 @@
 import Todo from "./todo";
 import { projectData } from "./data";
 import { renderHome } from "./render";
+import { checkStorageAvailabily } from "./local-storage";
 
 const todoModal = document.querySelector(".modal");
 const todoForm = document.querySelector("#TodoForm");
@@ -68,6 +69,11 @@ const submitTodoForm = () => {
     // Re-render To-Dos & close Modal
     closeModal();
     renderHome();
+
+    // Save projectData in local storage
+    if (checkStorageAvailabily("localStorage")) {
+      localStorage.setItem("Projects", JSON.stringify(projectData));
+    }
   }
 };
 

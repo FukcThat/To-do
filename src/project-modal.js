@@ -1,4 +1,5 @@
 import { projectData } from "./data";
+import { checkStorageAvailabily } from "./local-storage";
 import Project from "./project";
 import { renderProjects } from "./render";
 
@@ -38,6 +39,11 @@ const submitProjectForm = () => {
     // Re-render Projects Array and close Modal
     closeModal();
     renderProjects(projectData);
+
+    // Save projectData in local storage
+    if (checkStorageAvailabily("localStorage")) {
+      localStorage.setItem("Projects", JSON.stringify(projectData));
+    }
   }
 };
 

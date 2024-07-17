@@ -42,6 +42,27 @@ DONE - PrimeRender function
 DONE - Current Project functionality
 
 - switch active project
-  --> populate todo-container with correct todoList
+- populate todo-container with correct todoList
+
+---
 
 - Local Storage fun
+
+  - On Page Load
+
+    - Load Projects
+    - Load To-Do's
+
+  - Add Project
+    - Check if LS is available
+    - Check if Project already exists in LS ?
+    - Save to local storage
+  - Edit Project -> overwrite LS?
+  - Delete Proejct
+
+  - Add Todo
+    - Check if LS is available
+    - Check if To-Do already exists in LS ?
+    - Save to local storage
+  - Edit To-Do -> overwrite LS?
+  - Delete to-Do
