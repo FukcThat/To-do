@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: grey;
+    background-color: rgb(29, 29, 29);
 }
 
 label {
@@ -141,3 +141,15 @@ input[type='radio'] {
     gap: 1rem;
 }
 
+.todo-container {
+    height: 50rem;
+    width: auto;
+    background-color: rgb(62, 62, 62);
+    border-radius: 1.5rem;
+}
+
+.todo-div {
+    height: 10rem;
+    width: 10rem;
+    background-color: rosybrown;
+}
