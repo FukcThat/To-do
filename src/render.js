@@ -7,6 +7,7 @@ export const renderProjects = (projects) => {
   // Create a div for each project and append it to the nav
   projects.forEach((project) => {
     const projectNavBtn = document.createElement("button");
+    projectNavBtn.classList.add("project-nav-btns");
 
     projectNavBtn.addEventListener("click", () => {
       renderOneProject(project.projectName);
@@ -22,6 +23,7 @@ export const renderTodos = (todoList) => {
 
   todoList.forEach((todo) => {
     const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo-div");
 
     //Title
     let todoTitle = document.createElement("h2");

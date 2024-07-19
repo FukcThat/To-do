@@ -14,7 +14,6 @@ if (checkStorageAvailabily("localStorage")) {
     projectData.push(homeProject);
     localStorage.setItem("Projects", JSON.stringify(projectData));
   } else {
-    console.log("hello");
     // Local Storage Projects exist, so we set our projectData to that
 
     localStorageProjectData.forEach((projectItem) => {

@@ -8,62 +8,70 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="project-continer"></div>
-    <section id="todoModalSection" class="modal hidden">
-      <form id="TodoForm">
-        <h2>Task</h2>
-        <button id="closeTodoFormBtn" class="close-btn" type="button">x</button>
-        <label
-          >Title
-          <input id="TodoFormTitle" type="text" placeholder="Title" />
-        </label>
-        <label
-          >Description
-          <input id="TodoFormDesc" type="text" placeholder="Description" />
-        </label>
-        <label
-          >Date
-          <input id="TodoFormDate" type="date" />
-        </label>
-        <div id="radioBtns">
-          <label class="whenever">
-            <input id="lowPrio" type="radio" name="priority" value="low" />
-            <span>Whenever</span>
+    <div class="page-wrapper">
+      <div class="project-continer"></div>
+      <section id="todoModalSection" class="modal hidden">
+        <form id="TodoForm">
+          <h2>Task</h2>
+          <button id="closeTodoFormBtn" class="close-btn" type="button">
+            x
+          </button>
+          <label
+            >Title
+            <input id="TodoFormTitle" type="text" placeholder="Title" />
           </label>
-          <label class="soon">
-            <input id="lowPrio" type="radio" name="priority" value="medium" />
-            <span>Ideally Soonish</span>
+          <label
+            >Description
+            <input id="TodoFormDesc" type="text" placeholder="Description" />
           </label>
-          <label class="now">
-            <input id="lowPrio" type="radio" name="priority" value="high" />
-            <span>Basically right now</span>
+          <label
+            >Date
+            <input id="TodoFormDate" type="date" />
           </label>
+          <div id="radioBtns">
+            <label class="whenever">
+              <input id="lowPrio" type="radio" name="priority" value="low" />
+              <span>Whenever</span>
+            </label>
+            <label class="soon">
+              <input id="lowPrio" type="radio" name="priority" value="medium" />
+              <span>Ideally Soonish</span>
+            </label>
+            <label class="now">
+              <input id="lowPrio" type="radio" name="priority" value="high" />
+              <span>Basically right now</span>
+            </label>
+            <label>
+              Project
+              <select id="projectDropDown"></select>
+            </label>
+          </div>
+          <button id="todoSubBtn" type="button">Submit</button>
+        </form>
+      </section>
+      <div class="overlay hidden"></div>
+      <button id="open-new-todo" class="open-btn">New Task</button>
+      <div id="homeContainer"></div>
+      <section id="projectModalSection" class="modal hidden">
+        <form id="projectForm">
+          <h2>New Project</h2>
+          <button id="closeProjectFormBtn" class="close-btn" type="button">
+            x
+          </button>
           <label>
-            Project
-            <select id="projectDropDown"></select>
+            Project Name
+            <input
+              id="ProjectFormTitle"
+              type="text"
+              placeholder="Project Name"
+            />
           </label>
-        </div>
-        <button id="todoSubBtn" type="button">Submit</button>
-      </form>
-    </section>
-    <div class="overlay hidden"></div>
-    <button id="open-new-todo" class="open-btn">New Task</button>
-    <div id="homeContainer"></div>
-    <section id="projectModalSection" class="modal hidden">
-      <form id="projectForm">
-        <h2>New Project</h2>
-        <button id="closeProjectFormBtn" class="close-btn" type="button">
-          x
-        </button>
-        <label>
-          Project Name
-          <input id="ProjectFormTitle" type="text" placeholder="Project Name" />
-        </label>
-        <button id="projectSubBtn" type="button">Submit</button>
-      </form>
-    </section>
-    <div class="overlay hidden"></div>
-    <button id="open-new-project" class="open-btn">New Project</button>
-    <div class="todo-container"></div>
+          <button id="projectSubBtn" type="button">Submit</button>
+        </form>
+      </section>
+      <div class="overlay hidden"></div>
+      <button id="open-new-project" class="open-btn">New Project</button>
+      <div class="todo-container"></div>
+    </div>
   </body>
 </html>
