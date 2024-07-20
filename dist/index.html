@@ -50,7 +50,24 @@
         </form>
       </section>
       <div class="overlay hidden"></div>
-      <button id="open-new-todo" class="open-btn">New Task</button>
+      <button id="open-new-todo" class="open-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="2.5rem"
+          height="2.5rem"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.25"
+            d="M16 2v2m-5-2v2M6 2v2m13.5 6c0-3.3 0-4.95-1.025-5.975S15.8 3 12.5 3h-3C6.2 3 4.55 3 3.525 4.025S2.5 6.7 2.5 10v5c0 3.3 0 4.95 1.025 5.975S6.2 22 9.5 22h3m5-8v8m4-4h-8M7 15h4m-4-5h8"
+            color="white"
+          />
+        </svg>
+      </button>
       <div id="homeContainer"></div>
       <section id="projectModalSection" class="modal hidden">
         <form id="projectForm">
@@ -70,8 +87,22 @@
         </form>
       </section>
       <div class="overlay hidden"></div>
-      <button id="open-new-project" class="open-btn">New Project</button>
-      <div class="todo-container"></div>
+      <div class="todo-wrapper">
+        <button id="open-new-project" class="open-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="2.5rem"
+            height="2.5rem"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill="white"
+              d="M15.511 9.409c.377 0 .682.299.682.668v2.964h3.032c.378 0 .684.3.684.668a.676.676 0 0 1-.684.667l-3.032-.001v2.965c0 .37-.305.669-.682.669a.675.675 0 0 1-.682-.669l-.001-2.965h-3.031a.676.676 0 0 1-.684-.666c0-.369.306-.667.684-.667l3.031-.001v-2.964c0-.369.306-.668.683-.668M1.417 2l6.116.002c.43.028.783.14 1.047.37c.226.198.392.462.518.806l.38 1.17a1 1 0 0 1 .028.126h9.81c.378 0 .684.299.684.667v3.58a.676.676 0 0 1-.684.667a.676.676 0 0 1-.683-.667V5.808H1.367v10.368c.004.21.002.303.05.373c.037.056.067.067.15.07h8.957c.377 0 .683.298.683.667a.676.676 0 0 1-.683.667H1.577l-.117-.01c-.536-.09-.94-.29-1.177-.654c-.19-.293-.276-.658-.283-1.103V5.137l.003-1.822c.036-.355.155-.66.376-.895c.244-.261.585-.39 1.038-.42m.047 1.333c-.084.005-.09.024-.096.047l-.001 1.094h6.717l-.282-.87c-.046-.126-.084-.199-.134-.237c-.049-.038-.074-.024-.182-.033z"
+            />
+          </svg>
+        </button>
+        <div class="todo-container"></div>
+      </div>
     </div>
   </body>
 </html>
