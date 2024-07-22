@@ -1,16 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 body {
     background-color: rgb(29, 29, 29);
 }
 
+h2 {
+    font-size: 24px;
+    place-self: center;
+}
+
 label {
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
+    font-size: 16px;
 }
 
 input[type='radio'] {
@@ -30,12 +37,13 @@ input[type='radio'] {
 }
 
 .modal span {
+    height: 3rem;
+    width: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 8rem;
-    height: 3rem;
+    font-size: 14px;
     border-radius: 0.8rem;
     cursor: pointer;
 }
@@ -86,22 +94,21 @@ input[type='radio'] {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    z-index: -2;
+    z-index: 1;
   }
 
-
   .modal {
+    min-height: 20rem;
+    min-width: 40rem;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    z-index: 2;
     flex-direction: column;
     justify-content: center;
-    gap: 0.4rem;
-    width: 450px;
-    padding: 1.3rem;
-    min-height: 250px;
-    z-index: 2;
-    position: absolute;
-    top: 20%;
-    background-color: white;
-    border: 1px solid #ddd;
+    align-items: center;
+    background-color: rgb(62, 62, 62);
+    border: 1px solid rgb(86, 86, 86);
     border-radius: 15px;
   }
 
@@ -111,7 +118,6 @@ input[type='radio'] {
     border-radius: 1rem;
     border: none;
     background-color: rgb(116, 153, 61);
-    color: white;
   }
 
   .close-btn {
@@ -124,7 +130,6 @@ input[type='radio'] {
     border-radius: 50%;
     font-size: 1.5rem;
     background-color: rgba(255, 0, 0, 0.5);
-    color: white;
   }
 
   .close-btn:hover {
@@ -133,14 +138,13 @@ input[type='radio'] {
   }
 
 #TodoForm {
-    height: 20rem;
-    width: 25rem;
-    padding: 0rem 2rem;
+    height: 25rem;
+    width: 30rem;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
-    background-color: white;
     border-radius: 1rem;
 }
 

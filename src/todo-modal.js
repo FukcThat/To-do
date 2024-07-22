@@ -11,7 +11,7 @@ const tdDateInput = document.querySelector("#TodoFormDate");
 const projectDropdown = document.querySelector("#projectDropDown");
 
 const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".open-btn");
+const openModalBtn = document.querySelector("#open-new-todo");
 const closeModalBtn = document.querySelector(".close-btn");
 const tdSubBtn = document.querySelector("#todoSubBtn");
 
