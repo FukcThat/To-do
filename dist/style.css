@@ -20,6 +20,12 @@ label {
     font-size: 16px;
 }
 
+select, input {
+    color: rgb(29, 29, 29);
+    font-size: 11px;
+}
+
+
 input[type='radio'] {
     position: absolute;
     opacity: 0;
@@ -238,4 +244,7 @@ input[type='radio'] {
     box-shadow: black 1px 1px 5px ;
     background-color: rgb(86, 86, 86);
     border-radius: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
