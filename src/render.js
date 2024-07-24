@@ -1,4 +1,5 @@
-import { projectData } from "./data";
+import { projectData, removeTodoItem } from "./data";
+import { checkStorageAvailabily } from "./local-storage";
 
 export const renderProjects = (projects) => {
   const projectContainer = document.querySelector(".project-continer");
@@ -21,12 +22,32 @@ export const renderTodos = (todoList) => {
   const todoContainer = document.querySelector(".todo-container");
   todoContainer.innerHTML = "";
 
-  todoList.forEach((todo) => {
+  todoList.forEach((todo, index) => {
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo-div");
 
+    // Delete Btn
+    let deleteTaskBtn = document.createElement("button");
+    deleteTaskBtn.textContent = "x";
+    deleteTaskBtn.classList.add("delete-todo-btn");
+
+    deleteTaskBtn.addEventListener("click", () => {
+      //
+      projectData.forEach((project) => {
+        if (project.projectName === todo.project) {
+          project.removeTodo(index);
+          if (checkStorageAvailabily("localStorage")) {
+            localStorage.setItem("Projects", JSON.stringify(projectData));
+          }
+          renderOneProject(project.projectName);
+        }
+      });
+    });
+
+    todoDiv.appendChild(deleteTaskBtn);
+
     //Title
-    let todoTitle = document.createElement("h2");
+    let todoTitle = document.createElement("h3");
     todoTitle.textContent = todo.title;
     todoDiv.appendChild(todoTitle);
 
@@ -57,7 +78,7 @@ export const renderHome = () => {
     });
   });
 
-  renderTodos(everyTodoArray);
+  renderTodos(everyTodoArray, "home");
 };
 
 export const renderOneProject = (projectName) => {

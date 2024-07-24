@@ -10,6 +10,10 @@ class Project {
     this.todoList.push(todoItem);
   }
 
+  removeTodo(index) {
+    this.todoList.splice(index, 1);
+  }
+
   getTodoList() {
     return this.todoList;
   }

@@ -39,3 +39,33 @@ if (checkStorageAvailabily("localStorage")) {
   const homeProject = new Project("Home");
   projectData.push(homeProject);
 }
+
+// export const removeTodoItem = (todo, Project) => {
+//   console.log("removeTodo called with todo:", todo);
+//   console.log("removetodo called with project:", Project);
+
+//   if (!Project || !Project.todoList) {
+//     console.error("Project or todoList is undefined");
+//     return;
+//   }
+
+//   const todoIndex = Project.todoList.findIndex(
+//     (item) =>
+//       item.title === todo.title &&
+//       item.description === todo.description &&
+//       item.dueDate === todo.dueDate &&
+//       item.priority === todo.priority
+//   );
+
+//   console.log("Index of todo to be removed:", todoIndex);
+
+//   if (todoIndex !== -1) {
+//     Project.todoList.splice(todoIndex, 1);
+
+//     localStorage.setItem("Projects", JSON.stringify(projectData));
+
+//     renderTodos(Project.getTodoList(), Project);
+//   } else {
+//     console.error("To-do item not found in project.todoList");
+//   }
+// };

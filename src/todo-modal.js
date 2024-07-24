@@ -1,6 +1,6 @@
 import Todo from "./todo";
 import { projectData } from "./data";
-import { renderHome } from "./render";
+import { renderHome, renderOneProject } from "./render";
 import { checkStorageAvailabily } from "./local-storage";
 
 const todoModal = document.querySelector(".modal");
@@ -21,7 +21,7 @@ const openModal = () => {
   overlay.classList.remove("hidden");
 
   projectDropdown.innerHTML = "";
-
+  tdDateInput.valueAsDate = new Date();
   projectData.forEach((project) => {
     const projectOption = document.createElement("option");
     projectOption.setAttribute("value", project.projectName);
@@ -67,8 +67,9 @@ const submitTodoForm = () => {
     });
 
     // Re-render To-Dos & close Modal
+    renderOneProject(projectDropdown.value);
+
     closeModal();
-    renderHome();
 
     // Save projectData in local storage
     if (checkStorageAvailabily("localStorage")) {
