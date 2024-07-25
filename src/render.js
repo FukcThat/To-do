@@ -32,7 +32,7 @@ export const renderTodos = (todoList) => {
     deleteTaskBtn.classList.add("delete-todo-btn");
 
     deleteTaskBtn.addEventListener("click", () => {
-      //
+      // if the project name is the same as the todo's project property value, update Local Storage
       projectData.forEach((project) => {
         if (project.projectName === todo.project) {
           project.removeTodo(index);
@@ -77,11 +77,12 @@ export const renderHome = () => {
       everyTodoArray.push(todoItem);
     });
   });
-
   renderTodos(everyTodoArray, "home");
 };
 
 export const renderOneProject = (projectName) => {
+  updateHeader(projectName);
+
   if (projectName === "Home") return renderHome();
 
   projectData.forEach((project) => {
@@ -89,4 +90,9 @@ export const renderOneProject = (projectName) => {
       renderTodos(project.getTodoList());
     }
   });
+};
+
+const updateHeader = (projectName) => {
+  let todoContainerHeader = document.querySelector("#taskHeader");
+  todoContainerHeader.textContent = projectName;
 };

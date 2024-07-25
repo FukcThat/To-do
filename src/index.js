@@ -7,4 +7,4 @@ initTodoModal();
 initProjectModal();
 renderProjects(projectData);
 renderHome();
-renderOneProject();
+renderOneProject("Home");
